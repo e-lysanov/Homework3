@@ -6,6 +6,7 @@ public class Main {
         task4();
         task5();
         task6();
+        task7();
     }
 
     public static void task1() {
@@ -99,5 +100,25 @@ public class Main {
         short generalWeightG = (short) (generalWeightEggs + generalWeightBananas + generalWeightMilk + generalWeightIceCream);
         double generalWeightK = (generalWeightG / 1000) + ((generalWeightG % 1000) * 0.001);
         System.out.println("Масса спортзавтрака " + generalWeightG + " граммов или " + generalWeightK + " килограммов");
+    }
+    public static void task7() {
+        System.out.println("Задача 7");
+        // Пишем код для задачи 7
+        //byte overWeightK = 7;
+        int overWeightG = 7000;
+        float overWeightGF = 7000;
+        short minDelG = 250;
+        short maxDelG = 500;
+        short medDelG = (short) ((maxDelG + minDelG) / 2);
+        float medDelGF = (short) ((maxDelG + minDelG) / 2);
+        int maxDays = overWeightG / minDelG;
+        int minDays = overWeightG / maxDelG;
+        // за неименем возможности на данном этапе обучения использовать циклы придумал костыль
+        // за счет деления остатка от деления перевеса на средний дневной весогоночный вес на остаток от деления перевеса уменьшенного на средний дневной весогоночный вес на средний дневной весогоночный вес, убедился что этот остаток есть
+        float overDays = (overWeightGF % medDelGF) / ((overWeightGF - medDelGF) % medDelGF);
+        int medDays = overWeightG / medDelG;
+        System.out.println("Ежедневно скидывая по " + minDelG + " граммов спортсмен уложится в категорию за " + maxDays + " дней");
+        System.out.println("Ежедневно скидывая по " + maxDelG + " граммов спортсмен уложится в категорию за " + minDays + " дней");
+        System.out.println("Ежедневно скидывая по " + medDelG + " граммов спортсмен уложится в категорию за " + medDays + " дней и " + overDays + " дней со сниженной нагрузкой (NaN = 0)");
     }
 }
