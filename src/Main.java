@@ -118,7 +118,6 @@ public class Main {
         //float overDays = (overWeightGF % medDelGF) / ((overWeightGF - medDelGF) % medDelGF);
         //int medDays = overWeightG / medDelG;
         float medDays = overWeightGF / medDelGF;
-        System.out.println(medDays);
         System.out.println("Ежедневно скидывая по " + minDelG + " граммов спортсмен уложится в категорию за " + maxDays + " дней");
         System.out.println("Ежедневно скидывая по " + maxDelG + " граммов спортсмен уложится в категорию за " + minDays + " дней");
         //System.out.println("Ежедневно скидывая по " + medDelG + " граммов спортсмен уложится в категорию за " + medDays + " дней и " + overDays + " дней со сниженной нагрузкой (NaN = 0)");
