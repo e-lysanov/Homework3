@@ -105,7 +105,6 @@ public class Main {
     public static void task7() {
         System.out.println("Задача 7");
         // Пишем код для задачи 7
-        //byte overWeightK = 7;
         int overWeightG = 7000;
         float overWeightGF = 7000;
         short minDelG = 250;
@@ -114,13 +113,17 @@ public class Main {
         float medDelGF = (short) ((maxDelG + minDelG) / 2);
         int maxDays = overWeightG / minDelG;
         int minDays = overWeightG / maxDelG;
-        // за неименем возможности на данном этапе обучения использовать циклы придумал костыль
+        // за неименем возможности на данном этапе обучения использовать циклы и иные методы придумал костыль
         // за счет деления остатка от деления перевеса на средний дневной весогоночный вес на остаток от деления перевеса уменьшенного на средний дневной весогоночный вес на средний дневной весогоночный вес, убедился что этот остаток есть
-        float overDays = (overWeightGF % medDelGF) / ((overWeightGF - medDelGF) % medDelGF);
-        int medDays = overWeightG / medDelG;
+        //float overDays = (overWeightGF % medDelGF) / ((overWeightGF - medDelGF) % medDelGF);
+        //int medDays = overWeightG / medDelG;
+        float medDays = overWeightGF / medDelGF;
+        System.out.println(medDays);
         System.out.println("Ежедневно скидывая по " + minDelG + " граммов спортсмен уложится в категорию за " + maxDays + " дней");
         System.out.println("Ежедневно скидывая по " + maxDelG + " граммов спортсмен уложится в категорию за " + minDays + " дней");
-        System.out.println("Ежедневно скидывая по " + medDelG + " граммов спортсмен уложится в категорию за " + medDays + " дней и " + overDays + " дней со сниженной нагрузкой (NaN = 0)");
+        //System.out.println("Ежедневно скидывая по " + medDelG + " граммов спортсмен уложится в категорию за " + medDays + " дней и " + overDays + " дней со сниженной нагрузкой (NaN = 0)");
+        // в итоге почитав обсуждение домашки решил использовать метод, который мы еще не прошли (округление в большую сторону и перевод из float в int)
+        System.out.println("Ежедневно скидывая по " + medDelG + " граммов спортсмен уложится в категорию за " + (int)Math.ceil(medDays) + " дней");
     }
     public static void task8() {
         System.out.println("Задача 8");
