@@ -7,6 +7,7 @@ public class Main {
         task5();
         task6();
         task7();
+        task8();
     }
 
     public static void task1() {
@@ -120,5 +121,20 @@ public class Main {
         System.out.println("Ежедневно скидывая по " + minDelG + " граммов спортсмен уложится в категорию за " + maxDays + " дней");
         System.out.println("Ежедневно скидывая по " + maxDelG + " граммов спортсмен уложится в категорию за " + minDays + " дней");
         System.out.println("Ежедневно скидывая по " + medDelG + " граммов спортсмен уложится в категорию за " + medDays + " дней и " + overDays + " дней со сниженной нагрузкой (NaN = 0)");
+    }
+    public static void task8() {
+        System.out.println("Задача 8");
+        int mashaSalary = 67760;
+        int denisSalary = 83690;
+        int krisSalary = 76230;
+        int mashaNewSalary = (mashaSalary * 110) / 100;
+        int denisNewSalary = (denisSalary * 110) / 100;
+        int krisNewSalary = (krisSalary * 110) / 100;
+        int mashaDiff = (mashaNewSalary - mashaSalary) * 12;
+        int denisDiff = (denisNewSalary - denisSalary) * 12;
+        int krisDiff = (krisNewSalary - krisSalary) * 12;
+        System.out.println("Маша теперь получает " + mashaNewSalary + " рублей. Годовой доход вырос на " + mashaDiff + " рублей");
+        System.out.println("Денис теперь получает " + denisNewSalary + " рублей. Годовой доход вырос на " + denisDiff + " рублей");
+        System.out.println("Кристина теперь получает " + krisNewSalary + " рублей. Годовой доход вырос на " + krisDiff + " рублей");
     }
 }
